@@ -1,0 +1,15 @@
+
+[1mFrom:[0m /home/ec2-user/environment/Rails/schedule_app/app/views/tasks/show.html.erb:7 #<Class:0x00007f4f7c07cab0>#_app_views_tasks_show_html_erb___2393212226269137309_69989680015740:
+
+     [1;34m2[0m: 
+     [1;34m3[0m: <table>
+     [1;34m4[0m:   <tr>
+     [1;34m5[0m:     <td>タイトル</td>
+     [1;34m6[0m:     <td><% @task.title %></td>
+ =>  [1;34m7[0m:     <% binding.pry %>
+     [1;34m8[0m:   </tr>
+     [1;34m9[0m:   <tr>
+    [1;34m10[0m:     <td>開始日</td>
+    [1;34m11[0m:     <td><% @task.start %></td>
+    [1;34m12[0m:   </tr>
+
