@@ -1,0 +1,29 @@
+<h3>【スケジュール新規登録】</h3>
+
+<%= form_with url: "/tasks/create" do |task| %>
+<table>
+  <tr>
+    <td>タイトル</td>
+    <td><%= task.text_field :title %></td>
+  </tr>
+  <tr>
+    <td>開始日</td>
+    <td><%= task.date_field :start %></td>
+  </tr>
+  <tr>
+    <td>終了日</td>
+    <td><%= task.date_field :end %></td>
+  </tr>
+  <tr>
+    <td>終日</td>
+    <td><%= task.check_box :allday, {}, checked_value="〇", unchecked_vallue="" %></td>
+  </tr>
+  <tr>
+    <td>スケジュールメモ</td>
+    <td><%= task.text_area :content %></td>
+  </tr>
+</table>
+
+<li><%= task.submit "新規登録" %></li>
+<% end %>
+<p><%= link_to("スケジュール一覧に戻る", "/tasks/index") %></p>

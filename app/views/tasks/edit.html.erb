@@ -1,0 +1,30 @@
+<h3>【スケジュール編集】</h3>
+
+<%= form_with url: "/tasks/#{@task.id}/update" do |task| %>
+  <table>
+    <tr>
+      <td>タイトル</td>
+      <td><%= task.text_field :title, value: @task.title %></td>
+    </tr>
+    <tr>
+      <td>開始日</td>
+      <td><%= task.date_field :start, value: @task.start %></td>
+    </tr>
+    <tr>
+      <td>終了日</td>
+      <td><%= task.date_field :end, value: @task.end %></td>
+    </tr>
+    <tr>
+      <td>終日</td>
+      <td><%= task.check_box :allday,  {}, checked_value="〇", unchecked_vallue="" %></td>
+    </tr>
+    <tr>
+      <td>スケジュールメモ</td>
+      <td><%= task.text_area :content, value: @task.content %></td>
+    </tr>
+  </table>
+
+<li><%= task.submit "編集完了" %></li>
+<% end %>
+
+<p><%= link_to("スケジュール一覧に戻る", "/tasks/index") %></p>

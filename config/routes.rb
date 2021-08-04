@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  get "tasks/index" => "tasks#index"
+  get "tasks/new" => "tasks#new"
+  get "tasks/:id" => "tasks#show"
+  post "tasks/create" => "tasks#create"
+  get "tasks/:id/edit" => "tasks#edit"
+  post "tasks/:id/update" => "tasks#update"
+  get "tasks/:id/destroy" => "tasks#destroy"
+  
+  resources :tasks
 end
